@@ -11,7 +11,7 @@ def get_weight_size(path):
     return f'{stats.st_size / 1024 / 1024:.1f}'
 
 if __name__ == '__main__':
-    model_path = 'runs/train/exp soep hafbdy1-gate1-uv-noloss/weights/best.pt'
+    model_path = ''
     model = RTDETR(model_path)  # select trained weight path
     result = model.val(data='/home/waas/RTDETR-main/dataset4/data4.yaml',
                       split='test',  # split can be train, val, test depending on your dataset
